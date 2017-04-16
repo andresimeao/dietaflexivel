@@ -1,5 +1,42 @@
 <ion-view title="Calculo Flexível">
     <ion-content>
-        Hello World!
+        <ion-list>
+            <ion-item>
+                <label>Sexo</label>
+                <ion-radio class="margin-radio" ng-model="choice" ng-value="'F'">Feminino</ion-radio>
+                <ion-radio ng-model="choice" ng-value="'M'">Maculino</ion-radio>
+            </ion-item>
+            <ion-item>
+                <label>Idade</label>
+                    <input type="number" placeholder="Idade">
+            </ion-item>
+            <ion-item>
+                <label>Altura</label>
+                    <input type="number" placeholder="ex: 1,70">
+            </ion-item>
+            <ion-item>
+                <label>Peso</label>
+                    <input type="number" placeholder="ex: 80,0">
+            </ion-item>
+            <ion-item>
+                <label>Atividade Fisicas</label>
+                <div class="div-icons">
+                    <!--0-->
+                    <img width="50px" height="50px" src="img/escritorio.jpg" alt="escritorio">
+                    <!--30-->
+                    <img style="margin-left: 10%" width="50px" height="50px" src="img/professor6.png" alt="escritorio">
+                    <!--65-->
+                    <img style="margin-left: 10%" width="50px" height="50px" src="img/garçonete.png" alt="escritorio">
+                    <!--100-->
+                    <img style="float: right" width="50px" height="50px" src="img/carpinteiro2.jpg" alt="escritorio">
+                </div>
+                <div class="range">
+                    <input type="range" value="30" name="volume">
+                </div>
+            </ion-item>
+            <ion-item>
+                <label>Objetivo</label>
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>
