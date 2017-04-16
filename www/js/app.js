@@ -32,7 +32,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     controller: 'CalculoFlexivelCtrl'
   });
 
+   $urlRouterProvider.otherwise('/calculo-flexivel');
+
 
 });
-
 
