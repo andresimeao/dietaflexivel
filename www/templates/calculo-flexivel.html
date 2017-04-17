@@ -8,34 +8,52 @@
             </ion-item>
             <ion-item>
                 <label>Idade</label>
-                    <input type="number" placeholder="Idade">
+                    <input type="number" placeholder="ex: 25" required>
             </ion-item>
             <ion-item>
                 <label>Altura</label>
-                    <input type="number" placeholder="ex: 1,70">
+                    <input type="number" placeholder="ex: 1,70" required>
             </ion-item>
             <ion-item>
                 <label>Peso</label>
-                    <input type="number" placeholder="ex: 80,0">
+                    <input type="number" placeholder="ex: 80,45" required>
             </ion-item>
             <ion-item>
                 <label>Atividade Fisicas</label>
-                <div class="div-icons">
-                    <!--0-->
-                    <img width="50px" height="50px" src="img/escritorio.jpg" alt="escritorio">
-                    <!--30-->
-                    <img style="margin-left: 10%" width="50px" height="50px" src="img/professor6.png" alt="escritorio">
-                    <!--65-->
-                    <img style="margin-left: 10%" width="50px" height="50px" src="img/garçonete.png" alt="escritorio">
-                    <!--100-->
-                    <img style="float: right" width="50px" height="50px" src="img/carpinteiro2.jpg" alt="escritorio">
+                <div class="row" id="padding">
+                    <div class="col">
+                        <img class="icon-secretario" src="img/escritorio.jpg" alt="sedentário">
+                    </div>
+                    <div class="col">
+                        <center><img class="icon-prof" src="img/professor6.png" alt="escritorio"></center>
+                    </div>
+                    <div class="col">
+                        <center><img class="icon-garçonete" src="img/garçonete.png" alt="escritorio"></center>
+                    </div>
+                    <div class="col">
+                        <img class="icon-pesado" src="img/carpinteiro2.jpg" alt="escritorio">
+                    </div>
                 </div>
                 <div class="range">
-                    <input type="range" value="30" name="volume">
+                    <input type="range" value="2" min="1" max="4" name="atividade" required>
                 </div>
             </ion-item>
             <ion-item>
                 <label>Objetivo</label>
+                <div class="row">
+                    <div class="col">
+                        <img class="icon-garçonete" src="img/emagrecer.png" alt="escritorio">
+                    </div>
+                    <div class="col">
+                        <center><img class="icon-garçonete" src="img/manter.png" alt="escritorio"></center>
+                    </div>
+                    <div class="col">
+                        <img  style="float: right" class="icon-garçonete" src="img/engordar.png" alt="escritorio">
+                    </div>
+                </div>
+                <div class="range">
+                    <input type="range" value="2" min="1" max="3" name="atividade" required>
+                </div>
             </ion-item>
         </ion-list>
     </ion-content>
