@@ -1,11 +1,21 @@
 /* Empty. Add your own CSS if you like */
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+ font-size: 17px;
+}
 .div-icons{
     width: 100%;
     padding-top: 3%;
     padding-left: 7%;
     padding-right: 6%;
 }
-
+.button-duvida{
+    background-color:transparent;
+    border: none;
+    font-size: 25px;
+    float: right;
+    margin-top: 0px;
+    padding: 0;
+}
 #padding{
     padding-left: 5%;
     padding-right: 5%;
@@ -13,7 +23,9 @@
 .margin-radio{
     margin-top: 2%
 }
-
+.titulo-calculo{
+    font-size: 18px;
+}
 .icon-secretario{
     width:50px;
     height:50px;
@@ -37,33 +49,77 @@
     height:50px;
 }
 
-/*Iphone 5
+/*Iphone 5*/
 @media (max-width: 320px) {
-    .div-icons{
-        padding-left: 6%;
-        padding-right: 6%;
-    }
     .icon-secretario{
         float: left;
-        width:45px;
-        height:45px;
+        width:40px;
+        height:40px;
     }
     .icon-prof{
-        margin-left: 10%;
-        width:45px;
-        height:45px;
+        width:40px;
+        height:40px;
     }
     .icon-garçonete{
-        margin-left: 7%;
-        width:45px;
-        height:45px;
+        width:40px;
+        height:40px;
     }
     .icon-pesado{
-        width:45px;
-        height:45px;
+        width:40px;
+        height:40px;
     }
-
+    textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    font-size: 13px;
+    }
+    .titulo-calculo{
+    font-size: 15px;
+    }
+    .item p{
+        font-size: 11px;
+    }
+    .item{
+        font-size: 14px;
+    }
 }
+
+/*iPad Pro*/
+@media (min-width:768px) {
+    .icon-secretario{
+        float: left;
+        width:80px;
+        height:80px;
+    }
+    .icon-prof{
+        width:80px;
+        height:80px;
+    }
+    .icon-garçonete{
+        width:80px;
+        height:80px;
+    }
+    .icon-pesado{
+        width:80px;
+        height:80px;
+    }
+    textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    font-size: 30px;
+    }
+    .titulo-calculo{
+    font-size: 31px;
+    }
+    .item p{
+        font-size: 28px;
+    }
+    .item{
+        font-size: 29px;
+    }
+    .button{
+        font-size: 27px;
+        min-height: 57px;
+    }
+}
+
+
 
 /*Iphone 6
 @media (width:375px) {
@@ -113,24 +169,3 @@
     }
 
 }
-
-/*iPad Pro
-@media (min-width:1024px) {
-    .div-icons{
-        padding-left: 5%;
-        padding-right: 4%;
-    }
-    .icon-secretario{
-        float: left;
-    }
-    .icon-prof{
-        margin-left: 11%;
-    }
-    .icon-garçonete{
-        margin-left: 6%;
-    }
-    .icon-pesado{
-        margin-left: 8%
-    }
-
-}*/

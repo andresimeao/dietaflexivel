@@ -26,6 +26,11 @@ app.run(function($ionicPlatform) {
 
 app.config(function($stateProvider, $urlRouterProvider){
 
+  $stateProvider.state('explicacao-atividade',{
+    url: '/explicacao-atividade',
+    templateUrl: 'templates/explicacao-atividade.html',
+    controller: 'CalculoFlexivelCtrl'
+  });
   $stateProvider.state('calculo-flexivel',{
     url: '/calculo-flexivel',
     templateUrl: 'templates/calculo-flexivel.html',

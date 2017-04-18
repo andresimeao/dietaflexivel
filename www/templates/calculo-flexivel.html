@@ -1,60 +1,96 @@
 <ion-view title="Calculo Flexível">
     <ion-content>
         <ion-list>
-            <ion-item>
-                <label>Sexo</label>
-                <ion-radio class="margin-radio" ng-model="choice" ng-value="'F'">Feminino</ion-radio>
-                <ion-radio ng-model="choice" ng-value="'M'">Maculino</ion-radio>
-            </ion-item>
-            <ion-item>
-                <label>Idade</label>
-                    <input type="number" placeholder="ex: 25" required>
-            </ion-item>
-            <ion-item>
-                <label>Altura</label>
-                    <input type="number" placeholder="ex: 1,70" required>
-            </ion-item>
-            <ion-item>
-                <label>Peso</label>
-                    <input type="number" placeholder="ex: 80,45" required>
-            </ion-item>
-            <ion-item>
-                <label>Atividade Fisicas</label>
-                <div class="row" id="padding">
-                    <div class="col">
-                        <img class="icon-secretario" src="img/escritorio.jpg" alt="sedentário">
+            <form action="">
+                <ion-item>
+                    <label class="titulo-calculo">Sexo</label>
+                    <ion-radio class="margin-radio" ng-model="choice" ng-value="'F'">Feminino</ion-radio>
+                    <ion-radio ng-model="choice" ng-value="'M'">Maculino</ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <label for="idade" class="titulo-calculo">Idade</label>
+                        <input name="idade" type="number" placeholder="ex: 25"  min="10" max="100" required>
+                </ion-item>
+                <ion-item>
+                    <label for="altura" class="titulo-calculo">Altura</label>
+                        <input name="altura" type="number" placeholder="ex: 1,70" min="1.0" required>
+                </ion-item>
+                <ion-item>
+                    <label class="titulo-calculo">Peso</label>
+                        <input type="number" placeholder="ex: 80,45" required>
+                </ion-item>
+
+                <ion-item>
+                    <label for="atividade" class="titulo-calculo">Atividade Fisicas</label>
+                    <button class="button-duvida ion-help-circled" ng-click="showAtividade()"></button>
+                    <div class="row" id="padding">
+                        <div class="col">
+                            <img class="icon-secretario" src="img/escritorio.jpg" alt="Sedentário">
+                        </div>
+                        <div class="col">
+                            <center>
+                                <img class="icon-prof" src="img/professor6.png" alt="Atividade leve">
+                            </center>
+                        </div>
+                        <div class="col">
+                            <center>
+                                <img class="icon-garçonete" src="img/garçonete.png" alt="Ativo">
+                            </center>
+                        </div>
+                        <div class="col">
+                            <img class="icon-pesado" src="img/carpinteiro2.jpg" alt="Muito ativo">
+                        </div>
                     </div>
-                    <div class="col">
-                        <center><img class="icon-prof" src="img/professor6.png" alt="escritorio"></center>
+                    <div class="row">
+                        <div class="col">
+                            <p style="margin-left: 4%">Sedentário</p>
+                        </div>
+                        <div class="col">
+                            <center><p>Atividade</br>leve</p></center>
+                        </div>
+                        <div class="col">
+                            <center><p>Ativo</p></center>
+                        </div>
+                        <div class="col">
+                            <p style="float: right;margin-right:4%">Muito ativo</p>
+                        </div>
                     </div>
-                    <div class="col">
-                        <center><img class="icon-garçonete" src="img/garçonete.png" alt="escritorio"></center>
+                    <div class="range">
+                        <input name="atividade" type="range" value="2" min="1" max="4" name="atividade" required>
                     </div>
-                    <div class="col">
-                        <img class="icon-pesado" src="img/carpinteiro2.jpg" alt="escritorio">
+                </ion-item>
+
+                <ion-item>
+                    <label for="objetivo" class="titulo-calculo">Objetivo</label>
+                    <button class="button-duvida ion-help-circled"></button>
+                    <div class="row" id="padding">
+                        <div class="col">
+                            <img class="icon-garçonete" src="img/emagrecer.png" alt="escritorio">
+                        </div>
+                        <div class="col">
+                            <center>
+                                <img class="icon-garçonete" src="img/manter.png" alt="escritorio">
+                            </center>
+                        </div>
+                        <div class="col">
+                            <img  style="float: right" class="icon-garçonete" src="img/engordar.png" alt="escritorio">
+                        </div>
                     </div>
-                </div>
-                <div class="range">
-                    <input type="range" value="2" min="1" max="4" name="atividade" required>
-                </div>
-            </ion-item>
-            <ion-item>
-                <label>Objetivo</label>
-                <div class="row">
-                    <div class="col">
-                        <img class="icon-garçonete" src="img/emagrecer.png" alt="escritorio">
+                    <div class="row">
+                        <div class="col"><p style="float: left;margin-left: 4%">Perder peso</p></div>
+                        <div class="col"><center><p>Manter peso</p></center></div>
+                        <div class="col"><p style="float: right;margin-right: 4%">Ganhar peso</p></div>
                     </div>
-                    <div class="col">
-                        <center><img class="icon-garçonete" src="img/manter.png" alt="escritorio"></center>
+                    <div class="range">
+                        <input name="objetivo" type="range" value="2" min="1" max="3" name="atividade" required>
                     </div>
-                    <div class="col">
-                        <img  style="float: right" class="icon-garçonete" src="img/engordar.png" alt="escritorio">
-                    </div>
-                </div>
-                <div class="range">
-                    <input type="range" value="2" min="1" max="3" name="atividade" required>
-                </div>
-            </ion-item>
+                </ion-item>
+
+                <ion-item>
+                    <button class="button button-full button-assertive">Calcular</button>
+                </ion-item>
+            </form>
         </ion-list>
     </ion-content>
 </ion-view>
