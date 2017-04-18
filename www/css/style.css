@@ -48,6 +48,18 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     width:50px;
     height:50px;
 }
+.icon-duvidas{
+    height: 90px;
+    width: 90px;
+}
+.titulo-duvidas{
+    color: #444;
+    font-size: 19px;
+}
+.p-duvidas{
+    color: #666;
+    font-size: 17px;
+}
 
 /*Iphone 5*/
 @media (max-width: 320px) {
