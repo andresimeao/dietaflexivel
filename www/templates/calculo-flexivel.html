@@ -10,15 +10,29 @@
 
                 <ion-item>
                     <label for="idade" class="titulo-calculo">Idade</label>
-                        <input name="idade" type="number" placeholder="ex: 25"  min="10" max="100" required>
+                        <input class="input-calculo" name="idade" type="number" placeholder="ex: 25"  min="10" max="100" required>
                 </ion-item>
                 <ion-item>
                     <label for="altura" class="titulo-calculo">Altura</label>
-                        <input name="altura" type="number" placeholder="ex: 1,70" min="1.0" required>
+                    <div class="row">
+                        <div class="col col-90">
+                            <input class="input-calculo" name="altura" type="number" placeholder="ex: 1.70" min="1.0" required>
+                        </div>
+                        <div class="col col-10">
+                            <p class="metragem-calculo">M</p>
+                        </div>
+                    </div>
                 </ion-item>
                 <ion-item>
                     <label class="titulo-calculo">Peso</label>
-                        <input type="number" placeholder="ex: 80,45" required>
+                    <div class="row">
+                        <div class="col col-90">
+                            <input class="input-calculo" type="number" placeholder="ex: 80.45" required>
+                        </div>
+                        <div class="col col-10">
+                            <p class="metragem-calculo">Kg</p>
+                        </div>
+                    </div>
                 </ion-item>
 
                 <ion-item>

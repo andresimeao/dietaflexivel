@@ -49,8 +49,10 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     height:50px;
 }
 .icon-duvidas{
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
+    float: left;
+    
 }
 .titulo-duvidas{
     color: #444;
@@ -59,6 +61,18 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .p-duvidas{
     color: #666;
     font-size: 17px;
+}
+.input-calculo{
+    width: 100%;
+    min-height: 60px;
+}
+.metragem-calculo{
+    font-size: 17px !important;
+    font-weight: bold;
+    color:#ef473a !important;
+    width: 100%;
+    margin-top: 50% !important;
+    margin-left: 40%;
 }
 
 /*Iphone 5*/
@@ -92,6 +106,10 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     .item{
         font-size: 14px;
     }
+    .metragem-calculo{
+        font-size: 14px !important;
+    }
+
 }
 
 /*iPad Pro*/
