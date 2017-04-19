@@ -87,12 +87,18 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .logo{
     width:160px;
     height:160px;
-    margin-left: 32%;
-    margin-right: 32%;
     margin-top: 20%;
     padding-bottom: 0px !important;
     margin-bottom: 0px;
 }
+.button-outline-light{
+    border: 2px solid #fff !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    margin-top: 30% !important;
+}
+
+
 /*Iphone 5*/
 @media (max-width: 320px) {
     .icon-secretario{

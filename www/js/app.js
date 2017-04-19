@@ -34,12 +34,12 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider.state('explicacao-atividade',{
     url: '/explicacao-atividade',
     templateUrl: 'templates/explicacao-atividade.html',
-    controller: 'CalculoFlexivelCtrl'
+    controller: 'DuvidasCtrl'
   });
   $stateProvider.state('explicacao-objetivo',{
     url: '/explicacao-objetivo',
     templateUrl: 'templates/explicacao-objetivo.html',
-    controller: 'CalculoFlexivelCtrl'
+    controller: 'DuvidasCtrl'
   });
   $stateProvider.state('resultado-flexivel',{
     url: '/resultado-flexivel',
@@ -62,7 +62,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     controller: 'LoginCtrl'
   });
 
-   $urlRouterProvider.otherwise('/resultado-flexivel');
+   $urlRouterProvider.otherwise('/tela-inicial');
 
 
 });

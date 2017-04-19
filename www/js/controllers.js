@@ -1,5 +1,5 @@
 app.controller('CalculoFlexivelCtrl',
-  function($scope, $state, $ionicHistory){
+  function($scope, $state){
     $scope.showAtividade = function(){
         $state.go('explicacao-atividade');
     }
@@ -9,6 +9,10 @@ app.controller('CalculoFlexivelCtrl',
     $scope.calcular = function(){
         $state.go('resultado-flexivel');
     }
+
+});
+app.controller('DuvidasCtrl',
+    function($scope, $state, $ionicHistory){
 
 });
 
@@ -27,9 +31,15 @@ app.controller('TelaInicialCtrl',
 });
 
 app.controller('LoginCtrl',
-  function($scope, $state){  
+  function($scope, $state,$ionicHistory){
+      $scope.login = function(){
+          $state.go('resultado-flexivel');
+      }  
 });
 
 app.controller('CadastroCtrl',
-  function($scope, $state){  
+  function($scope, $state,$ionicHistory){
+      $scope.cadastrar = function(){
+          $state.go('calculo-flexivel');
+      }  
 });
