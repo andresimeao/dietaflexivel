@@ -41,8 +41,28 @@ app.config(function($stateProvider, $urlRouterProvider){
     templateUrl: 'templates/explicacao-objetivo.html',
     controller: 'CalculoFlexivelCtrl'
   });
+  $stateProvider.state('resultado-flexivel',{
+    url: '/resultado-flexivel',
+    templateUrl: 'templates/resultado-flexivel.html',
+    controller: 'ResultadoFlexivelCtrl'
+  });
+  $stateProvider.state('tela-inicial',{
+    url: '/tela-inicial',
+    templateUrl: 'templates/tela-inicial.html',
+    controller: 'TelaInicialCtrl'
+  });
+  $stateProvider.state('cadastro',{
+    url: '/cadastro',
+    templateUrl: 'templates/cadastro.html',
+    controller: 'CadastroCtrl'
+  });
+  $stateProvider.state('login',{
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  });
 
-   $urlRouterProvider.otherwise('/calculo-flexivel');
+   $urlRouterProvider.otherwise('/resultado-flexivel');
 
 
 });
