@@ -18,15 +18,28 @@
                 </ion-item>
                 <ion-item>
                     <label for="altura" class="titulo-calculo">Altura</label>
-                        <input  name="altura" ng-model="user.altura" type="number" placeholder="ex: 1.70" min="0.5" max="2.5"  required altura>
-                        <span ng-show="calculo.altura.$error.min || calculo.altura.$error.max">Altura miníma 0.5 e altura maxima 2.5</span>
-                        <span ng-show="calculo.altura.$error.required && !calculo.altura.$pristine">Campo Obrigatório</span>
-                        <span ng-show="calculo.altura.$error.altura && !calculo.altura.$pristine">altura em CM </span>
+                    <div class="row">
+                         <div class="col col-90">
+                            <input  name="altura" ng-model="user.altura" type="number" placeholder="ex: 1.70" min="0.5" max="2.5"  required altura>
+                            <span ng-show="calculo.altura.$error.min || calculo.altura.$error.max">Altura miníma 0.5 e altura maxima 2.5</span>
+                            <span ng-show="calculo.altura.$error.required && !calculo.altura.$pristine">Campo Obrigatório</span>
+                            <span ng-show="calculo.altura.$error.altura && !calculo.altura.$pristine">altura em CM </span>
+                         </div>
+                         <div class="col col-10">
+                             <p class="metragem-calculo">M</p>
+                         </div>
+                    </div>
                 </ion-item>
                 <ion-item>
                     <label class="titulo-calculo">Peso</label>
-                        <input ng-model="user.peso" type="number" placeholder="ex: 80,45" required>
-=======
+                    <div class="rom">
+                        <div class="col col-90">
+                        <input  class="input-calculo"ng-model="user.peso" type="number" placeholder="ex: 80.45" required>
+                        </div>
+                    <div class="col col-10">		
+                             <p class="metragem-calculo">Kg</p>		
+                    </div>
+                    </div>
         <form name="formCalculo" ng-submit="calcular()">
             <ion-list>
                 <ion-item>
