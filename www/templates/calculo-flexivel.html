@@ -1,5 +1,32 @@
 <ion-view title="Calculo Flexível">
     <ion-content>
+<<<<<<< HEAD
+        <ion-list>
+            <form name="calculo"ng-submit="calcular(user)" novalidate>
+                <ion-item>
+                    <label class="titulo-calculo">Sexo</label>
+                    <ion-radio class="margin-radio" ng-model="user.sexo" ng-value="'F'">Feminino</ion-radio>
+                    <ion-radio ng-model="user.sexo" ng-value="'M'">Maculino</ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <label for="idade" class="titulo-calculo">Idade</label>
+                        <input name="idade" ng-model="user.idade" type="number" placeholder="ex: 25"  min="10" max="100" required>
+                        <span ng-show="calculo.idade.$error.min">Idade minima 10 anos</span>
+                        <span ng-show="calculo.idade.$error.max">tem certeza que você tem mais de 100 anos ?</span>
+                        <span ng-show="calculo.idade.$error.required && !calculo.idade.$pristine">campo Obrigatório</span>
+                </ion-item>
+                <ion-item>
+                    <label for="altura" class="titulo-calculo">Altura</label>
+                        <input  name="altura" ng-model="user.altura" type="number" placeholder="ex: 1.70" min="0.5" max="2.5"  required altura>
+                        <span ng-show="calculo.altura.$error.min || calculo.altura.$error.max">Altura miníma 0.5 e altura maxima 2.5</span>
+                        <span ng-show="calculo.altura.$error.required && !calculo.altura.$pristine">Campo Obrigatório</span>
+                        <span ng-show="calculo.altura.$error.altura && !calculo.altura.$pristine">altura em CM </span>
+                </ion-item>
+                <ion-item>
+                    <label class="titulo-calculo">Peso</label>
+                        <input ng-model="user.peso" type="number" placeholder="ex: 80,45" required>
+=======
         <form name="formCalculo" ng-submit="calcular()">
             <ion-list>
                 <ion-item>
@@ -31,6 +58,7 @@
                             <p class="metragem-calculo">KG</p>
                         </div>
                     </div>
+>>>>>>> 5e67c7dc1937a924befadd066c4964fa48f2740a
                 </ion-item>
 
                 <ion-item>
@@ -69,7 +97,7 @@
                         </div>
                     </div>
                     <div class="range">
-                        <input name="atividade" type="range" value="2" min="1" max="4" name="atividade" required>
+                        <input name="atividade" type="range" ng-model="user.atividadeFisica" value="2" min="1" max="4" name="atividade" required>
                     </div>
                 </ion-item>
 
@@ -95,14 +123,21 @@
                         <div class="col"><p style="float: right;margin-right: 4%">Ganhar peso</p></div>
                     </div>
                     <div class="range">
-                        <input name="objetivo" type="range" value="2" min="1" max="3" name="atividade" required>
+                        <input name="objetivo" ng-model="user.objetivo" type="range" value="2" min="1" max="3" name="atividade" required>
                     </div>
                 </ion-item>
 
                 <ion-item>
+<<<<<<< HEAD
+                    <button class="button button-full button-assertive" ng-disabled="calcular.$invalid" type="submit">Calcular</button>
+                </ion-item>
+            </form><
+        </ion-list>
+=======
                     <button class="button button-full button-assertive" ng-disabled="formCalculo.$invalid" type="submit">Calcular</button>
                 </ion-item>
             </ion-list>
         </form>
+>>>>>>> 5e67c7dc1937a924befadd066c4964fa48f2740a
     </ion-content>
 </ion-view>
