@@ -7,9 +7,9 @@
                     <div class="row">
                         <div class="col">
                             <input name="idade" ng-model="user.idade" type="number" placeholder="ex: 25"  min="10" max="100" required>
-                            <span ng-show="calculo.idade.$error.min">Idade minima 10 anos</span>
-                            <span ng-show="calculo.idade.$error.max">Digite uma idade valida</span>
-                            <span ng-show="calculo.idade.$error.required && !calculo.idade.$pristine">campo Obrigatório</span>
+                            <span class="erro" ng-show="calculo.idade.$error.min">Idade mínima 10 anos</span>
+                            <span class="erro" ng-show="calculo.idade.$error.max">Digite uma idade válida</span>
+                            <span class="erro" ng-show="calculo.idade.$error.required && !calculo.idade.$pristine">Campo obrigatório</span>
                         </div>
                     </div>
                 </ion-item>
@@ -17,10 +17,10 @@
                     <label for="altura" class="titulo-calculo">Altura</label>
                     <div class="row">
                          <div class="col col-90">
-                            <input  name="altura" ng-model="user.altura" type="number" placeholder="ex: 1.70" min="0.5" max="2.5"  required>
-                            <span ng-show="calculo.altura.$error.min || calculo.altura.$error.max">Altura miníma 0.5 e altura maxima 2.5</span>
-                            <span ng-show="calculo.altura.$error.required && !calculo.altura.$pristine">Campo obrigatório</span>
-                            <span ng-show="calculo.altura.$error.altura && !calculo.altura.$pristine">Altura em CM </span>
+                            <input name="altura" ng-model="user.altura" type="number" placeholder="ex: 1.70" min="0.5" max="2.5" required>
+                            <span class="erro" ng-show="calculo.altura.$error.min || calculo.altura.$error.max">Altura miníma 0.5 e altura máxima 2.5</span>
+                            <span class="erro" ng-show="calculo.altura.$error.required && !calculo.altura.$pristine">Campo obrigatório</span>
+                            <span class="erro" ng-show="calculo.altura.$error.altura && !calculo.altura.$pristine">Altura em centímetros</span>
                          </div>
                          <div class="col col-10">
                              <p class="metragem-calculo">M</p>

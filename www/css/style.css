@@ -96,7 +96,10 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     font-size: 18px !important;
     margin-top: 30% !important;
 }
-
+.erro{
+    font-weight: bold;
+    color:#ef473a !important;
+}
 
 /*Iphone 5*/
 @media (max-width: 320px) {
