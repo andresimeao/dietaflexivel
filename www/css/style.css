@@ -64,14 +64,13 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 }
 .input-calculo{
     width: 100%;
-    min-height: 60px;
+    min-height: 45px;
 }
 .metragem-calculo{
     font-size: 17px !important;
     font-weight: bold;
     color:#ef473a !important;
     width: 100%;
-    margin-top: 50% !important;
     margin-left: 40%;
 }
 .calorias{

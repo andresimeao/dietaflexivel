@@ -4,13 +4,17 @@
             <ion-list>
                 <ion-item>
                     <label for="idade" class="titulo-calculo">Idade</label>
-                        <input class="input-calculo" name="idade" type="number" placeholder="ex: 25"  min="10" max="110" required>
+                    <div class="row">
+                        <div class="col">
+                            <input class="input-calculo" name="idade" type="number" placeholder="ex: 25"  min="5" max="100" required>
+                        </div>
+                    </div>
                 </ion-item>
                 <ion-item>
                     <label for="altura" class="titulo-calculo">Altura</label>
                     <div class="row">
                         <div class="col col-90">
-                            <input class="input-calculo" name="altura" type="number" placeholder="ex: 170" min="50" required>
+                            <input class="input-calculo" name="altura" type="number" placeholder="ex: 170" min="50" max="220" required>
                         </div>
                         <div class="col col-10">
                             <p class="metragem-calculo">CM</p>
@@ -21,7 +25,7 @@
                     <label class="titulo-calculo">Peso</label>
                     <div class="row">
                         <div class="col col-90">
-                            <input class="input-calculo" type="number" placeholder="ex: 80.45" min="20" required>
+                            <input class="input-calculo" type="number" placeholder="ex: 80.45" min="20" max="400" required>
                         </div>
                         <div class="col col-10">
                             <p class="metragem-calculo">KG</p>
