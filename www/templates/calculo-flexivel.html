@@ -1,5 +1,6 @@
 <ion-view title="Calculo Flexível">
     <ion-content>
+<<<<<<< HEAD
         <ion-list>
             <form name="calculo"ng-submit="calcular(user)" novalidate>
                 <ion-item>
@@ -25,6 +26,39 @@
                 <ion-item>
                     <label class="titulo-calculo">Peso</label>
                         <input ng-model="user.peso" type="number" placeholder="ex: 80,45" required>
+=======
+        <form name="formCalculo" ng-submit="calcular()">
+            <ion-list>
+                <ion-item>
+                    <label for="idade" class="titulo-calculo">Idade</label>
+                    <div class="row">
+                        <div class="col">
+                            <input class="input-calculo" name="idade" type="number" placeholder="ex: 25"  min="5" max="100" required>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <label for="altura" class="titulo-calculo">Altura</label>
+                    <div class="row">
+                        <div class="col col-90">
+                            <input class="input-calculo" name="altura" type="number" placeholder="ex: 170" min="50" max="220" required>
+                        </div>
+                        <div class="col col-10">
+                            <p class="metragem-calculo">CM</p>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <label class="titulo-calculo">Peso</label>
+                    <div class="row">
+                        <div class="col col-90">
+                            <input class="input-calculo" type="number" placeholder="ex: 80.45" min="20" max="400" required>
+                        </div>
+                        <div class="col col-10">
+                            <p class="metragem-calculo">KG</p>
+                        </div>
+                    </div>
+>>>>>>> 5e67c7dc1937a924befadd066c4964fa48f2740a
                 </ion-item>
 
                 <ion-item>
@@ -32,11 +66,11 @@
                     <button class="button-duvida ion-help-circled" ng-click="showAtividade()"></button>
                     <div class="row" id="padding">
                         <div class="col">
-                            <img class="icon-secretario" src="img/escritorio2.png" alt="Sedentário">
+                            <img class="icon-secretario" src="img/escritorio.png" alt="Sedentário">
                         </div>
                         <div class="col">
                             <center>
-                                <img class="icon-prof" src="img/professor6.png" alt="Atividade leve">
+                                <img class="icon-prof" src="img/professor.png" alt="Atividade leve">
                             </center>
                         </div>
                         <div class="col">
@@ -45,12 +79,12 @@
                             </center>
                         </div>
                         <div class="col">
-                            <img class="icon-pesado" src="img/carpinteiro2.jpg" alt="Muito ativo">
+                            <img class="icon-pesado" src="img/carpinteiro.png" alt="Muito ativo">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p style="margin-left: 4%">Sedentário</p>
+                            <p style="margin-left: 2%">Sedentário</p>
                         </div>
                         <div class="col">
                             <center><p>Atividade</br>leve</p></center>
@@ -94,9 +128,16 @@
                 </ion-item>
 
                 <ion-item>
+<<<<<<< HEAD
                     <button class="button button-full button-assertive" ng-disabled="calcular.$invalid" type="submit">Calcular</button>
                 </ion-item>
             </form><
         </ion-list>
+=======
+                    <button class="button button-full button-assertive" ng-disabled="formCalculo.$invalid" type="submit">Calcular</button>
+                </ion-item>
+            </ion-list>
+        </form>
+>>>>>>> 5e67c7dc1937a924befadd066c4964fa48f2740a
     </ion-content>
 </ion-view>

@@ -34,15 +34,35 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider.state('explicacao-atividade',{
     url: '/explicacao-atividade',
     templateUrl: 'templates/explicacao-atividade.html',
-    controller: 'CalculoFlexivelCtrl'
+    controller: 'DuvidasCtrl'
   });
   $stateProvider.state('explicacao-objetivo',{
     url: '/explicacao-objetivo',
     templateUrl: 'templates/explicacao-objetivo.html',
-    controller: 'CalculoFlexivelCtrl'
+    controller: 'DuvidasCtrl'
+  });
+  $stateProvider.state('resultado-flexivel',{
+    url: '/resultado-flexivel',
+    templateUrl: 'templates/resultado-flexivel.html',
+    controller: 'ResultadoFlexivelCtrl'
+  });
+  $stateProvider.state('tela-inicial',{
+    url: '/tela-inicial',
+    templateUrl: 'templates/tela-inicial.html',
+    controller: 'TelaInicialCtrl'
+  });
+  $stateProvider.state('cadastro',{
+    url: '/cadastro',
+    templateUrl: 'templates/cadastro.html',
+    controller: 'CadastroCtrl'
+  });
+  $stateProvider.state('login',{
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
   });
 
-   $urlRouterProvider.otherwise('/calculo-flexivel');
+   $urlRouterProvider.otherwise('/tela-inicial');
 
 
 });
