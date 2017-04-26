@@ -1,15 +1,25 @@
 app.controller('CalculoFlexivelCtrl',
-  function($scope, $state){
+  function($scope, $state, CalculoServices){
+      $scope.usuario = {};
+      
     $scope.showAtividade = function(){
         $state.go('explicacao-atividade');
     }
     $scope.showObjetivo = function(){
         $state.go('explicacao-objetivo');
     }
-    $scope.calcular = function(){
-        $state.go('resultado-flexivel');
+    
+    $scope.calcular = function(usuario){
+        usuario.sexo = 'M';
+        var resultado = CalculoServices.calcular(usuario);
+        if(resultado == null){
+            $scope.teste = 'erro';
+        }else{
+            $scope.teste = Math.round(resultado);
+        }
+        //$state.go('resultado-flexivel');
     }
-
+    
 });
 app.controller('DuvidasCtrl',
     function($scope, $state, $ionicHistory){
