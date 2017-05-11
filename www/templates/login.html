@@ -1,19 +1,19 @@
 <ion-view title="Login">
-        <ion-content>
-            <form name="formLogin" ng-submit="login()">
-                <ion-list>
-                    <ion-item class="item-input item-floating-label">
-                        <span class="input-label">E-mail</span>
-                        <input type="email" placeholder="E-mail" class="input-calculo" required>
-                    </ion-item>
-                    <ion-item class="item-input item-floating-label">
-                        <span class="input-label">Senha</span>
-                        <input type="password" placeholder="Senha" class="input-calculo" required>
-                    </ion-item>
-                    <ion-item style="border-bottom: none">
-                        <button class="button button-block button-assertive" type="submit">Entrar</button>
-                    </ion-item>
-                </ion-list>
-            </form>
-        </ion-content>
+    <ion-content>
+        <form name="formLogin" ng-submit="login(usuario)">
+            <ion-list>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">E-mail</span>
+                    <input type="email" placeholder="E-mail" class="input-calculo" ng-model="usuario.email" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Senha</span>
+                    <input type="password" placeholder="Senha" class="input-calculo" ng-model="usuario.password" ng-minlength="6" required>
+                </ion-item>
+                <ion-item style="border-bottom: none">
+                    <button class="button button-block button-assertive" type="submit" ng-disabled="formLogin.$invalid">Entrar</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
 </ion-view>
