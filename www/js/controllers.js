@@ -87,7 +87,7 @@ app.controller('CadastroCtrl',
                     console.log("User " + firebaseUser.uid + " created successfully!");
 
                     AdicionarUsuario.addUsuario(firebaseUser, usuario);
-                    $state.go('calculo-flexivel');
+                    $state.go('app.calculo-flexivel');
 
                 }).catch(function(error) {
 
@@ -112,12 +112,11 @@ app.controller('AppCtrl', function($scope, $state, $firebaseAuth, $firebaseObjec
 
     $scope.usuario = angular.copy(firebaseUser);
 
-    var _ref = firebase.database()
+    var ref = firebase.database()
         .ref('usuarios/' + firebaseUser.uid + '/status');
-    $firebaseObject(_ref).$loaded(function(obj) {
+    $firebaseObject(ref).$loaded(function(obj) {
         $scope.usuario.status = obj.$value;
     });
-
 
     $scope.logout = function() {
         $scope.authObj.$signOut();
