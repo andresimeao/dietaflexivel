@@ -1,5 +1,7 @@
 app.controller('CalculoFlexivelCtrl',
-    function($scope, $state) {
+    function($scope, $state, $firebaseAuth) {
+        var firebaseUser = $firebaseAuth().$getAuth();
+        $scope.teste = firebaseUser.uid;
 
         $scope.calcular = function() {
             $state.go('resultado-flexivel');
@@ -42,7 +44,7 @@ app.controller('LoginCtrl',
 
 
         if (firebaseUser) {
-            $state.go('resultado-flexivel');
+            $state.go('app.resultado-flexivel');
         }
 
         $scope.login = function(usuario) {
@@ -51,7 +53,7 @@ app.controller('LoginCtrl',
                 .then(function(firebaseUser) {
                     console.log("Signed in as:", firebaseUser.uid);
                     $ionicLoading.hide();
-                    $state.go('resultado-flexivel');
+                    $state.go('app.resultado-flexivel');
                 }).catch(function(error) {
                     $ionicLoading.hide();
                     var alertPopup = $ionicPopup.alert({
@@ -59,6 +61,10 @@ app.controller('LoginCtrl',
                         template: error.message
                     });
                 });
+        }
+
+        $scope.voltar = function() {
+            $ionicHistory.goBack(-1);
         }
     });
 
@@ -81,7 +87,7 @@ app.controller('CadastroCtrl',
                     console.log("User " + firebaseUser.uid + " created successfully!");
 
                     AdicionarUsuario.addUsuario(firebaseUser, usuario);
-                    $state.go('login');
+                    $state.go('calculo-flexivel');
 
                 }).catch(function(error) {
 
@@ -92,7 +98,29 @@ app.controller('CadastroCtrl',
                         template: error.message
                     });
                 });
-
         }
 
+        $scope.voltar = function() {
+            $ionicHistory.goBack(-1);
+        }
     });
+
+app.controller('AppCtrl', function($scope, $state, $firebaseAuth, $firebaseObject) {
+    $scope.authObj = $firebaseAuth();
+
+    var firebaseUser = $scope.authObj.$getAuth();
+
+    $scope.usuario = angular.copy(firebaseUser);
+
+    var _ref = firebase.database()
+        .ref('usuarios/' + firebaseUser.uid + '/status');
+    $firebaseObject(_ref).$loaded(function(obj) {
+        $scope.usuario.status = obj.$value;
+    });
+
+
+    $scope.logout = function() {
+        $scope.authObj.$signOut();
+        $state.go('tela-inicial');
+    }
+});
