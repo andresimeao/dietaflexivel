@@ -10,6 +10,7 @@ app.controller('CalculoFlexivelCtrl',
     }
     
     $scope.calcular = function(usuario){
+        //alterar sexo manualmente porque ainda nao foi implementado o cadasto para pegar o sexo do usuario
         usuario.sexo = 'M';
         var resultado = CalculoServices.calcular(usuario);
         if(resultado == null){
