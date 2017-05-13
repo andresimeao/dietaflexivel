@@ -1,60 +1,60 @@
-<<<<<<< HEAD
-app.factory('CalculoServices', function(){
+app.factory('CalculoServices', function() {
 
-     return{
-         calcular: function(usuario){
-             // calculo se for Homem
-            if(usuario.sexo == 'M'){
-                var resultado = (10*usuario.peso)+(6.25*(usuario.altura*100))-(5*usuario.idade)+5;
+    return {
+        calcular: function(usuario) {
+            // calculo se for Homem
+            if (usuario.sexo == 'M') {
+                var resultado = (10 * usuario.peso) + (6.25 * (usuario.altura * 100)) - (5 * usuario.idade) + 5;
                 //atividade-sedentario
-                if(usuario.atividadeFisica == '1'){
-                    return resultado*1.2;
+                if (usuario.atividadeFisica == '1') {
+                    return resultado * 1.2;
                 }
                 //fim atividade-sedentario
                 //atividade-leve
-                if(usuario.atividadeFisica =='2'){  
-                    return resultado*1.375;
+                if (usuario.atividadeFisica == '2') {
+                    return resultado * 1.375;
                 }
                 //fim atividade-level
                 //atividade-ativo 
-                if(usuario.atividadeFisica == '3'){
-                    return resultado*1.55;
+                if (usuario.atividadeFisica == '3') {
+                    return resultado * 1.55;
                 }
                 //fim atividade-ativo
                 // atividade muito-ativo
-                if(usuario.atividadeFisica == '4'){
-                    return resultado*1.725;
+                if (usuario.atividadeFisica == '4') {
+                    return resultado * 1.725;
                 }
             }
             // fim calculo se for homem
             // calculo se for mulher
-            if(usuario.sexo == 'F'){
-                var resultado = (10*usuario.peso)+(6.25*(usuario.altura*100))-(5*usuario.idade)-161;
+            if (usuario.sexo == 'F') {
+                var resultado = (10 * usuario.peso) + (6.25 * (usuario.altura * 100)) - (5 * usuario.idade) - 161;
                 //atividade-sedentario
-                if(usuario.atividadeFisica == '1'){
-                    return resultado*1.2;
+                if (usuario.atividadeFisica == '1') {
+                    return resultado * 1.2;
                 }
                 //fim atividade-sedentario
                 //atividade-leve
-                if(usuario.atividadeFisica =='2'){  
-                    return resultado*1.375;
+                if (usuario.atividadeFisica == '2') {
+                    return resultado * 1.375;
                 }
                 //fim atividade-level
                 //atividade-ativo 
-                if(usuario.atividadeFisica == '3'){
-                    return resultado*1.55;
+                if (usuario.atividadeFisica == '3') {
+                    return resultado * 1.55;
                 }
                 //fim atividade-ativo
                 // atividade muito-ativo
-                if(usuario.atividadeFisica == '4'){
-                    return resultado*1.725;
+                if (usuario.atividadeFisica == '4') {
+                    return resultado * 1.725;
                 }
             }
-            return null;  
-         }
+            return null;
+        }
 
-     }
-=======
+    }
+});
+
 app.factory("AdicionarUsuario", function($firebaseObject) {
     return {
         addUsuario: function(firebaseUser, usuario) {
@@ -73,5 +73,4 @@ app.factory("AdicionarUsuario", function($firebaseObject) {
             });
         }
     }
->>>>>>> 030a531f5b32111ec04fbefbb3655ecafa126d20
 });
