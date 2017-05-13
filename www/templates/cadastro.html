@@ -1,20 +1,23 @@
 <ion-view title="Cadastro">
-        <ion-content>
-            <form name="formCadastro" ng-submit="cadastrar()">
-                <ion-list>
-                    <ion-item class="item-input item-floating-label">
-                        <span class="input-label">Nome</span>
-                        <input type="text" placeholder="Nome" class="input-calculo" required>
-                    </ion-item>
-                    <ion-item class="item-input item-floating-label">
-                        <span class="input-label">E-mail</span>
-                        <input type="email" placeholder="E-mail" class="input-calculo" required>
-                    </ion-item>
-                    <ion-item class="item-input item-floating-label">
-                        <span class="input-label">Senha</span>
-                        <input type="password" placeholder="Senha" class="input-calculo" required>
-                    </ion-item>
-                    <!--<ion-item>
+    <ion-nav-buttons side="left">
+        <button ng-click="voltar()" class="button icon-left ion-chevron-left button-clear"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <form name="formCadastro" ng-submit="cadastrar(usuario)">
+            <ion-list>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Nome</span>
+                    <input type="text" placeholder="Nome" class="input-calculo" ng-model='usuario.nome' required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">E-mail</span>
+                    <input type="email" placeholder="E-mail" class="input-calculo" ng-model='usuario.email' required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Senha</span>
+                    <input type="password" placeholder="Senha" class="input-calculo" ng-minlength="6" ng-model='usuario.password' required>
+                </ion-item>
+                <!--<ion-item>
                         <label for="nome" class="titulo-calculo">Nome</label>
                         <input name="nome" type="text" class="input-calculo" placeholder="" required>
                     </ion-item>
@@ -26,14 +29,14 @@
                         <label for="senha" class="titulo-calculo">Senha</label>
                         <input name="senha" type="password" class="input-calculo" placeholder="" required>
                     </ion-item>-->
-                    <ion-item>
-                        <ion-radio ng-checked="true" ng-model="choice" ng-value="'F'">Feminino</ion-radio>
-                        <ion-radio ng-model="choice" ng-value="'M'">Maculino</ion-radio>
-                    </ion-item>
-                    <ion-item style="border-bottom: none">
-                        <button class="button button-block button-assertive" type="submit">Next</button>
-                    </ion-item>
-                </ion-list>
-            </form>
-        </ion-content>
+                <ion-item>
+                    <ion-radio ng-model="usuario.sexo" ng-value="'F'" required>Feminino</ion-radio>
+                    <ion-radio ng-model="usuario.sexo" ng-value="'M'" required>Maculino</ion-radio>
+                </ion-item>
+                <ion-item style="border-bottom: none">
+                    <button class="button button-block button-assertive" ng-disabled="formCadastro.$invalid" type="submit">Next</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
 </ion-view>
