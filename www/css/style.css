@@ -1,189 +1,261 @@
 /* Empty. Add your own CSS if you like */
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
- font-size: 17px;
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    font-size: 17px;
 }
-.div-icons{
+
+.fundo {
+    background: url('../img/fundo8.png')!important;
+    background-repeat: repeat-x;
+}
+
+.div-icons {
     width: 100%;
     padding-top: 3%;
     padding-left: 7%;
     padding-right: 6%;
 }
-.button-duvida{
-    background-color:transparent;
+
+.button-duvida {
+    background-color: transparent;
     border: none;
     font-size: 25px;
     float: right;
     margin-top: 0px;
     padding: 0;
 }
-#padding{
+
+#padding {
     padding-left: 5%;
     padding-right: 5%;
 }
-.margin-radio{
+
+.margin-radio {
     margin-top: 2%
 }
-.titulo-calculo{
+
+.titulo-calculo {
     font-size: 18px;
 }
-.icon-secretario{
-    width:50px;
-    height:50px;
+
+.icon-secretario {
+    width: 50px;
+    height: 50px;
     float: left;
 }
-.icon-prof{
+
+.icon-prof {
     /*margin-left: 10%;*/
-    width:50px;
-    height:50px;
-    margin:auto;
+    width: 50px;
+    height: 50px;
+    margin: auto;
 }
-.icon-garçonete{
+
+.icon-garçonete {
     /*margin-left: 11%;*/
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
 }
-.icon-pesado{
+
+.icon-pesado {
     float: right;
     /*margin-left: 10%;*/
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
 }
-.icon-duvidas{
+
+.icon-duvidas {
     height: 80px;
     width: 80px;
     float: left;
-    
 }
-.titulo-duvidas{
+
+.titulo-duvidas {
     color: #444;
     font-size: 19px;
 }
-.p-duvidas{
+
+.p-duvidas {
     color: #666;
     font-size: 17px;
 }
-.input-calculo{
+
+.input-calculo {
     width: 100%;
     min-height: 45px;
 }
-.metragem-calculo{
+
+.metragem-calculo {
     font-size: 17px !important;
     font-weight: bold;
-    color:#ef473a !important;
+    color: #ef473a !important;
     width: 100%;
     margin-left: 40%;
 }
-.calorias{
+
+.calorias {
     font-size: 20px !important;
     font-weight: bold;
-    color:#ef473a !important;
+    color: #ef473a !important;
 }
-.dieta-flexivel{
+
+.dieta-flexivel {
     text-align: center;
     color: white;
     font-weight: bold;
 }
-.logo{
-    width:160px;
-    height:160px;
+
+.logo {
+    width: 160px;
+    height: 160px;
     margin-top: 20%;
     padding-bottom: 0px !important;
     margin-bottom: 0px;
 }
-.button-outline-light{
+
+.button-outline-light {
     border: 2px solid #fff !important;
     color: #fff !important;
     font-size: 18px !important;
     margin-top: 30% !important;
 }
-.erro{
+
+.erro {
     font-weight: bold;
-    color:#ef473a !important;
+    color: #ef473a !important;
 }
 
+
 /*Iphone 5*/
+
 @media (max-width: 320px) {
-    .icon-secretario{
+    .icon-secretario {
         float: left;
-        width:40px;
-        height:40px;
+        width: 40px;
+        height: 40px;
     }
-    .icon-prof{
-        width:40px;
-        height:40px;
+    .icon-prof {
+        width: 40px;
+        height: 40px;
     }
-    .icon-garçonete{
-        width:40px;
-        height:40px;
+    .icon-garçonete {
+        width: 40px;
+        height: 40px;
     }
-    .icon-pesado{
-        width:40px;
-        height:40px;
+    .icon-pesado {
+        width: 40px;
+        height: 40px;
     }
-    textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
-    font-size: 15px;
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+        font-size: 15px;
     }
-    .titulo-calculo{
-    font-size: 15px;
+    .titulo-calculo {
+        font-size: 15px;
     }
-    .item p{
+    .item p {
         font-size: 11px;
     }
-    .item{
+    .item {
         font-size: 14px;
     }
-    .metragem-calculo{
+    .metragem-calculo {
         font-size: 11px !important;
         margin-left: 0%;
     }
-
 }
 
+
 /*iPad Pro*/
+
 @media (min-width:768px) {
-    .icon-secretario{
+    .icon-secretario {
         float: left;
-        width:80px;
-        height:80px;
+        width: 80px;
+        height: 80px;
     }
-    .icon-prof{
-        width:80px;
-        height:80px;
+    .icon-prof {
+        width: 80px;
+        height: 80px;
     }
-    .icon-garçonete{
-        width:80px;
-        height:80px;
+    .icon-garçonete {
+        width: 80px;
+        height: 80px;
     }
-    .icon-pesado{
-        width:80px;
-        height:80px;
+    .icon-pesado {
+        width: 80px;
+        height: 80px;
     }
-    textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
-    font-size: 30px;
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+        font-size: 30px;
     }
-    .titulo-calculo{
-    font-size: 31px;
+    .titulo-calculo {
+        font-size: 31px;
     }
-    .item p{
+    .item p {
         font-size: 28px;
     }
-    .item{
+    .item {
         font-size: 29px;
     }
-    .button{
+    .button {
         font-size: 27px;
         min-height: 57px;
     }
 }
 
+
 /*Galaxy S5*/
+
 @media (width:360px) {
-    .metragem-calculo{
+    .metragem-calculo {
         font-size: 13px !important;
         margin-left: 0%;
     }
-
 }
+
+
 /*Iphone 6
 @media (width:375px) {
     .div-icons{

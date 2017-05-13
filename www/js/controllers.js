@@ -4,7 +4,7 @@ app.controller('CalculoFlexivelCtrl',
         $scope.teste = firebaseUser.uid;
 
         $scope.calcular = function() {
-            $state.go('resultado-flexivel');
+            $state.go('app.resultado-flexivel');
         }
 
     });
@@ -15,6 +15,9 @@ app.controller('DuvidasCtrl',
         }
         $scope.showObjetivo = function() {
             $state.go('explicacao-objetivo');
+        }
+        $scope.voltar = function() {
+            $ionicHistory.goBack(-1);
         }
     });
 
