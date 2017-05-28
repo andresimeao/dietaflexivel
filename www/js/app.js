@@ -1,39 +1,68 @@
-// Ionic Starter App
+var app = angular.module('dietaFlexivel', ['ionic', 'firebase']);
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-var app = angular.module('dietaFlexivel', ['ionic', 'firebase'])
+app
+    .run(function($ionicPlatform) {
+        $ionicPlatform.ready(function() {
+            if (window.cordova && window.cordova.plugins.Keyboard) {
 
-app.run(function($ionicPlatform) {
-    $ionicPlatform.ready(function() {
-        if (window.cordova && window.cordova.plugins.Keyboard) {
-            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-            // for form inputs)
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
-            // Don't remove this line unless you know what you are doing. It stops the viewport
-            // from snapping when text inputs are focused. Ionic handles this internally for
-            // a much nicer keyboard experience.
-            cordova.plugins.Keyboard.disableScroll(true);
+                cordova.plugins.Keyboard.disableScroll(true);
+            }
+            if (window.StatusBar) {
+                StatusBar.styleDefault();
+            }
+        });
+    })
+
+.config(function($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
+
+        .state('create-foods', {
+        url: '/create-foods',
+        templateUrl: 'templates/create-foods.html',
+        controller: 'CreateFoodsCtrl'
+    })
+
+    .state('app.tabs-foods.my-foods', {
+        url: '/my-foods',
+        views: {
+            'tabMyfoods': {
+                templateUrl: 'templates/my-foods.html',
+                controller: 'MyFoodsCtrl'
+            }
         }
-        if (window.StatusBar) {
-            StatusBar.styleDefault();
+    })
+
+    .state('app.tabs-foods.favorite-foods', {
+        url: '/favorite-foods',
+        views: {
+            'tabFavoritefoods': {
+                templateUrl: 'templates/favorite-foods.html',
+                controller: 'FavoriteFoodsCtrl'
+            }
         }
-    });
-})
+    })
 
+    .state('app.tabs-foods', {
+        url: '/tabs-foods',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/tabs-foods.html',
+                controller: 'TabsFoodsCtrl'
+            }
+        }
+    })
 
-app.config(function($stateProvider, $urlRouterProvider) {
-
-    $stateProvider.state('app', {
+    .state('app', {
         url: '/app',
         abstract: true,
         templateUrl: 'templates/menu.html',
         controller: 'AppCtrl'
-    });
+    })
 
-    $stateProvider.state('app.calculo-flexivel', {
+    .state('app.calculo-flexivel', {
         url: '/calculo-flexivel',
         views: {
             'menuContent': {
@@ -41,9 +70,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 controller: 'CalculoFlexivelCtrl'
             }
         }
-    });
+    })
 
-    $stateProvider.state('app.resultado-flexivel', {
+    .state('app.dieta', {
+        url: '/dieta',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/dieta.html',
+                controller: 'DietaCtrl'
+            }
+        }
+    })
+
+    .state('app.resultado-flexivel', {
         url: '/resultado-flexivel',
         views: {
             'menuContent': {
@@ -51,39 +90,37 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 controller: 'ResultadoFlexivelCtrl'
             }
         }
-    });
+    })
 
-    $stateProvider.state('explicacao-atividade', {
+    .state('explicacao-atividade', {
         url: '/explicacao-atividade',
         templateUrl: 'templates/explicacao-atividade.html',
         controller: 'DuvidasCtrl'
-    });
+    })
 
-    $stateProvider.state('explicacao-objetivo', {
+    .state('explicacao-objetivo', {
         url: '/explicacao-objetivo',
         templateUrl: 'templates/explicacao-objetivo.html',
         controller: 'DuvidasCtrl'
-    });
+    })
 
-    $stateProvider.state('tela-inicial', {
+    .state('tela-inicial', {
         url: '/tela-inicial',
         templateUrl: 'templates/tela-inicial.html',
         controller: 'TelaInicialCtrl'
-    });
+    })
 
-    $stateProvider.state('cadastro', {
+    .state('cadastro', {
         url: '/cadastro',
         templateUrl: 'templates/cadastro.html',
         controller: 'CadastroCtrl'
-    });
+    })
 
-    $stateProvider.state('login', {
+    .state('login', {
         url: '/login',
         templateUrl: 'templates/login.html',
         controller: 'LoginCtrl'
     });
 
     $urlRouterProvider.otherwise('/tela-inicial');
-
-
 });

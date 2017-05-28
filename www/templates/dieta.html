@@ -1,0 +1,85 @@
+<ion-view title="Hoje">
+    <ion-nav-buttons side="right">
+        <input class="input-date" type="date">
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <div class="row">
+                    <div class="col">
+                        <div id="dieta-titles-left">
+                            <p class="dieta-margin">Café<br>da<br>manhã</p>
+                            <h2 class="dieta-numbers">500</h2>
+                        </div>
+                        <div id="dieta-titles-left">
+                            <p>Lanche<br>da<br>manhã</p>
+                            <h2 class="dieta-numbers">500</h2>
+                        </div>
+                        <div id="dieta-titles-left">
+                            <p>Almoço</p>
+                            <h2 class="dieta-numbers">500</h2>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2 style="color:#666;text-align:center;margin-top:0px">Calorias diárias</h2>
+                        <h2 style="color:#4e8ef7;text-align:center">1890</h2>
+                        <div class="chart" id="graph" data-percent="55">
+                            <span class="span1">Faltam</span>
+                            <span id="span" class="span2"></span>
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="dieta-titles-right">
+                            <p class="dieta-margin">Lanche<br>da<br>tarde</p>
+                            <h2 class="dieta-numbers">200</h2>
+                        </div>
+                        <div id="dieta-titles-right">
+                            <p>Jantar</p>
+                            <h2 class="dieta-numbers">300</h2>
+                        </div>
+                        <div id="dieta-titles-right">
+                            <p>Lanche<br>da<br>noite</p>
+                            <h2 class="dieta-numbers">70</h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <div class="col col-90">
+                        <p>Proteínas</p>
+                        <div class="progress">
+                            <span class="orange" style="width:70%"><span>30g</span></span>
+                        </div>
+                    </div>
+                    <div class="col col-10">
+                        <span class="span-gramas">40g</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-90">
+                        <p>Gorduras</p>
+                        <div class="progress">
+                            <span class="green" style="width:70%"><span>30g</span></span>
+                        </div>
+                    </div>
+                    <div class="col col-10">
+                        <span class="span-gramas">40g</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-90">
+                        <p>Carboidratos</p>
+                        <div class="progress">
+                            <span class="yellow" style="width:70%"><span>30g</span></span>
+                        </div>
+                    </div>
+                    <div class="col col-10">
+                        <span class="span-gramas">40g</span>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

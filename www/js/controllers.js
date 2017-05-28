@@ -1,4 +1,42 @@
-app.controller('CalculoFlexivelCtrl',
+app
+
+    .controller('CreateFoodsCtrl',
+    function($scope, $state, $ionicHistory) {
+        $scope.voltar = function() {
+            $ionicHistory.goBack(-1);
+        }
+    })
+
+.controller('MyFoodsCtrl',
+    function($scope, $state) {
+        $scope.showCreatefoods = function() {
+            $state.go('create-foods');
+        }
+    })
+
+.controller('FavoriteFoodsCtrl',
+    function($scope, $state) {})
+
+.controller('TabsFoodsCtrl',
+    function($scope, $state) {
+        $scope.showMyfoods = function() {
+            $state.go('app.tabs-foods.my-foods');
+        }
+        $scope.showFavoritefoods = function() {
+            $state.go('app.tabs-foods.favorite-foods');
+        }
+    })
+
+.controller('ResultadoFlexivelCtrl',
+    function($scope, $state, CalculoServices) {})
+
+.controller('DietaCtrl',
+    function($scope, $state, DietaDashboard) {
+        DietaDashboard.calcularCaloriaDiarias();
+
+    })
+
+.controller('CalculoFlexivelCtrl',
     function($scope, $state, CalculoServices) {
         $scope.usuario = {};
 
@@ -17,44 +55,13 @@ app.controller('CalculoFlexivelCtrl',
                 $scope.teste = 'erro';
             } else {
                 $scope.teste = Math.round(resultado);
-                $state.go('app.resultado-flexivel');
+                $state.go('app.resultado-flexivel', $scope.teste);
             }
         }
 
-    });
-app.controller('DuvidasCtrl',
-    function($scope, $state, $firebaseAuth, $ionicHistory) {
-        var firebaseUser = $firebaseAuth().$getAuth();
-        $scope.teste = firebaseUser.uid;
+    })
 
-        $scope.calcular = function() {
-            $state.go('app.resultado-flexivel');
-        }
-        $scope.showAtividade = function() {
-            $state.go('explicacao-atividade');
-        }
-        $scope.showObjetivo = function() {
-            $state.go('explicacao-objetivo');
-        }
-        $scope.voltar = function() {
-            $ionicHistory.goBack(-1);
-        }
-    });
-
-app.controller('ResultadoFlexivelCtrl',
-    function($scope, $state) {});
-
-app.controller('TelaInicialCtrl',
-    function($scope, $state) {
-        $scope.showLogin = function() {
-            $state.go('login');
-        }
-        $scope.showCadastro = function() {
-            $state.go('cadastro');
-        }
-    });
-
-app.controller('LoginCtrl',
+.controller('LoginCtrl',
     function($scope, $state, $ionicHistory, $firebaseAuth, $ionicLoading, $ionicPopup) {
         $scope.usuario = {
             email: '',
@@ -67,7 +74,7 @@ app.controller('LoginCtrl',
 
 
         if (firebaseUser) {
-            $state.go('app.resultado-flexivel');
+            $state.go('app.dieta');
         }
 
         $scope.login = function(usuario) {
@@ -76,7 +83,7 @@ app.controller('LoginCtrl',
                 .then(function(firebaseUser) {
                     console.log("Signed in as:", firebaseUser.uid);
                     $ionicLoading.hide();
-                    $state.go('app.resultado-flexivel');
+                    $state.go('app.dieta');
                 }).catch(function(error) {
                     $ionicLoading.hide();
                     var alertPopup = $ionicPopup.alert({
@@ -89,9 +96,9 @@ app.controller('LoginCtrl',
         $scope.voltar = function() {
             $ionicHistory.goBack(-1);
         }
-    });
+    })
 
-app.controller('CadastroCtrl',
+.controller('CadastroCtrl',
     function($scope, $state, $ionicHistory, $firebaseAuth, $ionicPopup, $ionicLoading, AdicionarUsuario) {
 
         $scope.usuario = {};
@@ -126,9 +133,9 @@ app.controller('CadastroCtrl',
         $scope.voltar = function() {
             $ionicHistory.goBack(-1);
         }
-    });
+    })
 
-app.controller('AppCtrl', function($scope, $state, $firebaseAuth, $firebaseObject) {
+.controller('AppCtrl', function($scope, $state, $firebaseAuth, $firebaseObject) {
     $scope.authObj = $firebaseAuth();
 
     var firebaseUser = $scope.authObj.$getAuth();
@@ -145,4 +152,33 @@ app.controller('AppCtrl', function($scope, $state, $firebaseAuth, $firebaseObjec
         $scope.authObj.$signOut();
         $state.go('tela-inicial');
     }
-});
+})
+
+.controller('DuvidasCtrl',
+    function($scope, $state, $firebaseAuth, $ionicHistory) {
+        var firebaseUser = $firebaseAuth().$getAuth();
+        $scope.teste = firebaseUser.uid;
+
+        $scope.calcular = function() {
+            $state.go('app.resultado-flexivel');
+        }
+        $scope.showAtividade = function() {
+            $state.go('explicacao-atividade');
+        }
+        $scope.showObjetivo = function() {
+            $state.go('explicacao-objetivo');
+        }
+        $scope.voltar = function() {
+            $ionicHistory.goBack(-1);
+        }
+    })
+
+.controller('TelaInicialCtrl',
+    function($scope, $state) {
+        $scope.showLogin = function() {
+            $state.go('login');
+        }
+        $scope.showCadastro = function() {
+            $state.go('cadastro');
+        }
+    })

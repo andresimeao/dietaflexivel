@@ -17,14 +17,17 @@
         </ion-header-bar>
         <ion-content>
             <ion-list>
+                <!--<ion-item class="bar-user">
+                    Nome do usuário
+                </ion-item>-->
+                <ion-item menu-close href="#/app/dieta">
+                    Dieta
+                </ion-item>
+                <ion-item menu-close href="#/app/tabs-foods/favorite-foods">
+                    Comidas
+                </ion-item>
                 <ion-item menu-close href="#/app/calculo-flexivel">
                     Calculo
-                </ion-item>
-                <ion-item menu-close href="#/app/resultado-flexivel">
-                    Resultado
-                </ion-item>
-                <ion-item menu-close href="#/app/comidas">
-                    Comidas
                 </ion-item>
                 <ion-item menu-close ng-click="logout()">
                     Sair

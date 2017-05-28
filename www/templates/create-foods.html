@@ -1,0 +1,58 @@
+<ion-view title="Nome do Alimento">
+    <ion-nav-buttons side="left">
+        <button ng-click="voltar()" class="button icon-left ion-chevron-left button-clear"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <form name="formCreateFoods" ng-submit="create(food)">
+            <ion-list>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Nome</span>
+                    <input type="number" placeholder="Nome" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Calorias</span>
+                    <input type="number" placeholder="E-mail" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Calorias</span>
+                    <input type="number" placeholder="Calorias" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Carboidratos</span>
+                    <input type="number" placeholder="Carboidratos" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Proteínas</span>
+                    <input type="number" placeholder="Proteínas" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Proteínas</span>
+                    <input type="number" placeholder="Proteínas" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Gorduras totais</span>
+                    <input type="number" placeholder="Gorduras totais" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Gorduras saturadas</span>
+                    <input type="number" placeholder="Gorduras saturadas" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Gorduras trans</span>
+                    <input type="number" placeholder="Gorduras trans" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Fibras</span>
+                    <input type="number" placeholder="Fibras" required>
+                </ion-item>
+                <ion-item class="item-input item-floating-label">
+                    <span class="input-label">Sódio</span>
+                    <input type="number" placeholder="Sódio" required>
+                </ion-item>
+                <ion-item>
+                    <button class="button button-block button-assertive" ng-disabled="formCreateFoods.$invalid" type="submit">Next</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>
